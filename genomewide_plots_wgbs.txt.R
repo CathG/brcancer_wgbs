@@ -7,7 +7,7 @@ library(data.table)
 library(RColorBrewer)
 
 # create genomic tiles of 10 kb
-tiles.pmd <- unlist(tileGenome(seqlengths=seqlengths(Hsapiens)[1:23], ntile=10000))
+tiles.pmd <- unlist(tileGenome(seqlengths=seqlengths(Hsapiens)[1:23], tilewidth=10000))
 
 # get the WGBS data (GRanges object, with CpG positions as rows, and
 # colnames PDxxxx.T = total reads, PDxxxx.M = methylated reads)
